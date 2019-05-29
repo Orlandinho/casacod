@@ -41,6 +41,18 @@ $exibir_tabela = true;
 	}
 
     $lista_tarefas = buscar_tarefas($conexao);
+?>
+
+<?php
+    
+$tarefa = [
+    'id'=>0,
+    'nome'=>'',
+    'descricao'=>'',
+    'prazo'=>'',
+    'prioridade'=>1,
+    'concluida'=>''
+];
 
 	require 'template.php';
 ?>
