@@ -13,7 +13,6 @@
         
         <?php if($exibir_tabela) : ?>
             <?php require 'tabela.php'; ?>
- ?>
         <?php endif; ?>
 	</body>
 </html>

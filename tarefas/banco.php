@@ -46,6 +46,8 @@ function editar_tarefa($conexao, $tarefa){
     $sqlEditar = "UPDATE tarefa SET nome = '{$tarefa['nome']}', descricao = '{$tarefa['descricao']}', prioridade = {$tarefa['prioridade']}, prazo = '{$tarefa['prazo']}', concluida = {$tarefa['concluida']} WHERE id = {$tarefa['id']}";
     
     mysqli_query($conexao, $sqlEditar);
+    header('Location: tarefas.php');
+    die();
 }
 
 function remover_tarefa($conexao, $id){
@@ -53,6 +55,8 @@ function remover_tarefa($conexao, $id){
     $sqlRemover = "DELETE FROM tarefa WHERE id = {$id}";
     
     mysqli_query($conexao, $sqlRemover);
+    header('Location: tarefas.php');
+    die();
 }
 
 ?>
